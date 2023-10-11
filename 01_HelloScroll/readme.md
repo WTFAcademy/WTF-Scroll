@@ -36,6 +36,8 @@ Block explorer URL: https://blockscout.scroll.io
 
 ![](./img/1-1.png)
 
+或点击链接：[ChainList - Scroll](https://chainlist.org/?search=scroll)
+
 ## 将ETH跨链到Scroll主网
 
 目前Scroll主网的跨链桥已经搭好，但是网页前端还没有开放，你只能通过直接与合约交互的形式进行跨链，推荐使用Etherscan进行合约交互。
