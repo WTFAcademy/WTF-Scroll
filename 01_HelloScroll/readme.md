@@ -30,6 +30,7 @@ RPC: https://rpc.scroll.io
 Chain ID: 534352
 Currency Symbol: ETH
 Block explorer URL: https://blockscout.scroll.io
+Chain exchange: https://owlto.finance/bridge?utm_source=tokenpocket
 ```
 
 你可以按照下面的截图在Metamask中添加Scroll主网：
