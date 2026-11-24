@@ -4,4 +4,4 @@
 
 ## 入门
 
-**第01讲：Hello Scroll**：[文章](https://github.com/WTFAcademy/WTF-Scroll/blob/main/01_HelloScroll/readme.md)
+**第01讲：Hello Scroll**：[文章](./01_HelloScroll/readme.md)
