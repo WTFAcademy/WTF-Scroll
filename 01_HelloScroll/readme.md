@@ -14,22 +14,22 @@ tags:
 
 社区：[Discord](https://discord.gg/5akcruXrsk)｜[微信群](https://docs.google.com/forms/d/e/1FAIpQLSe4KGT8Sh6sJ7hedQRuIYirOoZK_85miz3dw7vA1-YjodgJ-A/viewform?usp=sf_link)｜[官网 wtf.academy](https://wtf.academy)
 
-所有代码和教程开源在github: [github.com/WTFAcademy/WTF-Scroll](https://github.com/AmazingAng/WTFSolidity)
+所有代码和教程开源在github: [github.com/WTFAcademy/WTF-Scroll](https://github.com/WTFAcademy/WTF-Scroll)
 
 -----
 
-Scroll是一个EVM等效的zkRollup以太坊扩容方案，目前主网刚上线。由于和EVM等效，以太坊的开发者可以很容易的迁移到Scroll上进行开发。这一讲，我们将介绍如何连接Scroll主网，并把ETH跨链到Scroll。
+Scroll是一个EVM等效的zkRollup以太坊扩容方案。由于和EVM等效，以太坊的开发者可以很容易的迁移到Scroll上进行开发。这一讲，我们将介绍如何连接Scroll主网，并把ETH跨链到Scroll。
 
 ## 连接Scroll主网
 
-目前，Scroll主网只有官方的RPC可以用。
+下面使用官方 RPC。其他节点和工具见 [Scroll 官方文档](https://docs.scroll.io/en/developers/tooling-deployed-on-scroll)。
 
 ```
 Network Name: Scroll
 RPC: https://rpc.scroll.io
 Chain ID: 534352
 Currency Symbol: ETH
-Block explorer URL: https://blockscout.scroll.io
+Block explorer URL: https://scrollscan.com
 ```
 
 你可以按照下面的截图在Metamask中添加Scroll主网：
@@ -40,23 +40,7 @@ Block explorer URL: https://blockscout.scroll.io
 
 ## 将ETH跨链到Scroll主网
 
-目前Scroll主网的跨链桥已经搭好，但是网页前端还没有开放，你只能通过直接与合约交互的形式进行跨链，推荐使用Etherscan进行合约交互。
-
-> 注意⚠️：直接与合约交互有一定风险，输入错误的参数可能会导致你的资产丢失。
-
-跨链桥合约地址（以太坊主网）: [0xf8b1378579659d8f7ee5f3c929c2f3e332e41fd6](https://etherscan.io/address/0xf8b1378579659d8f7ee5f3c929c2f3e332e41fd6#writeProxyContract)。
-
-需要与第4个函数`depositETH`交互，它有`3`个参数。
-
-- 第一个参数是传入合约的ETH数量，以`ether`为单位，要跨链`0.01` ETH目前需要填`0.011`，好像有`0.001` ETH的手续费
-
-- 第二个参数`_amount`是跨链的ETH数量，以`wei`为单位（`1 ether = 10^18 wei`），要跨链`0.01` ETH就填`10000000000000000`（1后面跟16个零）。
-
-- 第三个参数`_gasLimit`，填`400000`。
-
-![](./img/1-2.png)
-
-之后点击确认交易，大概~15分钟后，你可以在Scroll主网收到你跨链的ETH！
+打开 [Scroll 官方桥](https://portal.scroll.io/bridge)，选择从以太坊主网转入 Scroll。连接钱包并输入金额后，核对桥页面显示的接收地址和费用，再确认交易。提交后可在桥页面检查进度。有关到账状态的说明，见 [跨链桥常见问题](https://portal.scroll.io/bridge/faq)。
 
 ## 总结
 
